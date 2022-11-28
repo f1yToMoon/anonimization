@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <fstream>
 #include <string>
 #include <vector>
@@ -13,15 +13,7 @@ int main()
 	vector<string> row, FIO, passportNum, from, to, dateFrom, dateTo, voyage, place, cost, bankNum;
 	string line, word;
 
-	fstream fout;
-	string s = "1,1,1,1,1,1,1,1,1,1";
-	srand(time(nullptr));
-	fout.open("reference1.csv", std::ios::out | std::ios::trunc);
-	for (int i = 0; i < 50000; ++i) {
-		fout << s << "\n";
-	}
-
-	/*fstream file("reference1.csv", ios::in);
+	fstream file("reference.csv", ios::in);
 	if (file.is_open()) {
 		while (getline(file, line)) {
 			row.clear();
@@ -70,8 +62,9 @@ int main()
 				bankNum.push_back(content[i][j]);
 			}
 		}
-	}*/
-	//Kanon(content);
+	}
+
+	Kanon(content);
 	//cout << k;
 
 	/*for (int i = 0; i < 50000; ++i) {
@@ -82,3 +75,4 @@ int main()
 	return 0;
 
 }
+
